@@ -121,3 +121,24 @@ header{
     font-size: 60px;
     display: inline-block;
 }
+
+/* Wyszukiwarka gościu */
+.searching{
+    border:solid 1px pink ;
+    margin-top: 20px;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.searching select{
+    padding: 10px;
+}
+
+/* Staty */
+.someinfo{
+    padding: 20px;
+    background-color: black;
+}
+
