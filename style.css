@@ -60,3 +60,64 @@ h1{
     align-items: center;
 }
 
+/* menu wyboru ziomuś */
+
+header{
+    margin-inline: 12px;   
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+}
+
+.navigation{
+    background-color:cadetblue;
+    padding: 12px;
+    width: 65%;
+    border-radius: 2px;
+    max-height: 10px;
+    margin-right: 10px;
+}
+
+.navbar-list{
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.navbar-items a{
+    float: right;
+    display: block;
+    text-align: center;
+    margin-inline: 20px;
+    font-size: 20 px;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.navbar-items a:hover{
+    background-color: black;
+}
+
+.icon-of-closing i{
+    font-size: 60px;
+    float: left;
+    cursor: pointer;
+}
+
+.hide{
+    display: none;
+}
+
+.navbar-bar-icon {
+    font-size: 60px;
+    display: inline-block;
+    margin-right: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.brand-logo{
+    font-size: 60px;
+    display: inline-block;
+}

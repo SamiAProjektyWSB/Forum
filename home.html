@@ -8,7 +8,26 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+    <header>
+        <div class="navbar">
+            <nav class="navigation hide" id="navbar">
+                <ul class="navbar-list">
+                    <span class="icon-of-closing" onclick="ShowDaNavbar()"><i class="close">X</i></span>
+                    <li class="navbar-items">
+                        <a href="#" >Strona Główna</a>
+                    </li>
+                    <li class="navbar-items">
+                        <a href="#" >Forum</a>
+                    </li>
+                    <li class="navbar-items">
+                        <a href="#" >O nas</a>
+                    </li>
+                </ul>    
+            </nav>
+            <a href="#" class="navbar-bar-icon" id="akon" onclick="HideDaNavbar()"><img src="dodajtucos.jpg" alt="ikonka rozwijania navbara"></i></a>    
+            <div class="brand-logo">Forum O wszystkim i o niczym</div>
+        </div>
+    </header>
     <div class="container">
         <div class="forum">
             <div class="forum-title">
@@ -136,6 +155,6 @@
         </div>
      <!-- DOdane dotąd -->         
     </div>
-    <script src="main.js"></script>
+    <script src="js.js"></script>
 </body>
 </html>
