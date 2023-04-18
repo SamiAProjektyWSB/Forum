@@ -1,0 +1,62 @@
+/* ustawienia globalne */
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-size:14px;
+    background-color: blue;
+    color: white;
+}
+
+a{
+    color: red;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+h1{
+
+}
+
+/* Strona home.html */
+
+.container{
+    margin: 20px;
+    padding: 20px;
+}
+
+.forum{
+    margin-top: 20px;
+}
+
+.forum-title{
+    background-color: brown;
+    padding-left: 5px;
+    border-radius: 5px;
+    margin: 4px;
+}
+
+.forum-row{
+    display: grid;
+    grid-template-columns: 7% 60% 13% 20%;
+}
+
+.forum-columns{
+    padding: 10px;
+    margin: 4px;
+    border-radius: 5px;
+    background-color: darkgreen;
+}
+
+.forum-description{
+ 
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
