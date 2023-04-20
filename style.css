@@ -201,3 +201,64 @@ header{
     padding: 5px 10px;
     
 }
+
+/*Strona - szczegoly posta */
+
+.head{
+    display: flex;
+    background-color: crimson;
+    padding: 5px;
+}
+
+.author{
+    flex: 20%;
+}
+
+.content{
+    flex:80%
+}
+
+.body{
+    display: flex;
+    background-color:goldenrod;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.body .author .username{
+    font-size: 20px;
+}
+
+.body .author img{
+    max-width: 49px;
+    max-height: 78px;
+}
+
+.body .content .comment button{
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    float: right;
+}
+
+.comment-here{
+    margin-top: 50px;
+}
+
+.comment-here textarea{
+    width: 100%;
+    min-height: 100px;
+    padding: 10px;
+    margin-block: 10px;
+}
+
+.comment-here input{
+    float: right;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.com-container{
+    margin-top: 20px;
+}

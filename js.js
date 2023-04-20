@@ -13,3 +13,15 @@ function ShowDaNavbar(){
     akon.setAttribute("style","display:block;");
     navbar.classList.add("hide");
 }
+
+//Pojawianie się okna komentowania postów
+
+function ShowMeCommentPlace(){
+    var comment = document.getElementById("kom")
+    comment.setAttribute("style", "display:block;");
+}
+
+function ShowMeReplyPlace(){
+    var comment = document.getElementById("odp")
+    comment.setAttribute("style", "display:block;");
+}
