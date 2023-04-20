@@ -187,3 +187,17 @@ header{
 }
 .table-row .last-reply{
     flex: 15%;
+}
+
+.site-num{
+    padding: 20px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.site-num a{
+    color: aqua;
+    margin-inline: 5px;
+    padding: 5px 10px;
+    
+}
