@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HomePage</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href=" {% static 'style.css' %} ">
 </head>
 <body>
     <header>
@@ -36,38 +38,13 @@
         </div>
     </header>
 
-    <div class="container">
-        <div class="posts-table">
-            <div class="table-head">
-                <div class="status">status</div>
-                <div class="subject">temat</div>
-                <div class="replies-and-views">odpowiedzi</div>
-                <div class="last-reply">ostatnia odpowiedz</div>
-            </div>
-            <div class="table-row">
-                <div class="status" >
-                    tu tez jakis obrazek by sie przydal
-                </div>
-                <div class="subject">
-                    <a href="">Jak umyć naczynia bez zmywary?! pomocy!!!</a><br> Dodane przez: <a href="#">Jay-Z</a>   
-                </div>
-                <div class="replies-and-views">
-                    2 odpowiedzi i 38 wyswietlen
-                </div>
-                <div class="last-reply">
-                    12.04.2023 przez <a href="#">Szczena</a>  
-                </div>
-            </div>
-        </div>
-        <div class="site-num">Nawigacja Stron: 
-            <br> <a href="#">1</a><a href="#">2</a><a href="#">3</a><a href="#"></a>
-        </div>
-    </div>
+    {% block content %}
+    {% endblock content %}
 
     <footer>
         <span>Forum utworzone przez: Sami Al-Sad & Maciek Górny & Patryk Magnus</span>
     </footer>
 
-    <script src="js.js"></script>
+    <script src="{% static 'js.js' %}"></script>
 </body>
 </html>

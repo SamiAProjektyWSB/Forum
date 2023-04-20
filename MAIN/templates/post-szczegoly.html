@@ -1,40 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HomePage</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <div class="navbar">
-            <nav class="navigation hide" id="navbar">
-                <ul class="navbar-list">
-                    <span class="icon-of-closing" onclick="ShowDaNavbar()"><i class="close">X</i></span>
-                    <li class="navbar-items">
-                        <a href="#" >Strona Główna</a>
-                    </li>
-                    <li class="navbar-items">
-                        <a href="#" >Forum</a>
-                    </li>
-                    <li class="navbar-items">
-                        <a href="#" >O nas</a>
-                    </li>
-                </ul>    
-            </nav>
-            <a href="#" class="navbar-bar-icon" id="akon" onclick="HideDaNavbar()"><img src="dodajtucos.jpg" alt="ikonka rozwijania navbara"></i></a>    
-            <div class="brand-logo">Forum O wszystkim i o niczym</div>
-        </div>
-        <div class="searching">
-            <select name="" id="">
-                <option value="anything">Wyszukiwanie...</option>
-            </select>
-            <input type="text" name="q" id="" placeholder="Wyszukaj...">
-            <button>Znajdź!</button>
-        </div>
-    </header>
+{% extends 'base.html' %}
+
+{% block content %}
  
     <div class="top-container">
         <div class="head">
@@ -89,10 +55,4 @@
     <input type="submit" name="" id="" value="Dodaj">
 </div>
 
-    <footer>
-        <span><br>Forum utworzone przez: Sami Al-Sad & Maciek Górny & Patryk Magnus</span>
-    </footer>
-
-    <script src="js.js"></script>
-</body>
-</html>
+{% endblock content %}
