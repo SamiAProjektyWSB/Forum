@@ -1,21 +1,21 @@
 {% extends 'base.html' %}
-
+{% load hitcount_tags %}
 {% block content %}
  
     <div class="top-container">
         <div class="head">
             <div class="author">Autor</div>
-            <div class="content">Temat: tytul (12354 wyświetleń)</div>
+            <div class="content">Temat: {{post.title}} ({%get_hit_count for post %} wyświetleń)</div>
         </div>
 
         <div class="body">
             <div class="author">
-                <div class="username"><a href="#">Michstyna</a></div>
+                <div class="username"><a href="#">{{post.user.fullname|title}}</a></div>
                 <div>Ranga</div>
-                <img src="zdjecieusera.jpg" alt="tu powinno byc zdjecie profilowe uzytkownika">
+                <img src="{{post.user.profile_pic.url}}" alt="tu powinno byc zdjecie profilowe uzytkownika">
                 <div></div>
             </div>
-            <div class="content">Siemanko, robie stronę na wordpressie z elementorem i motywem Astra. Na komputerze jest okej, lecz na telefonie mozna przesuwać strone prawo-lewo i pojawia się z lewej bialy pasek. Prosze o pomoc!</div>
+            <div class="content">{{post.content|safe}}</div>
         <div class="comment"><button onclick="ShowMeCommentPlace()">Dodaj komentarz</button></div>
         </div>
         <div class="comment-here hide" id="kom">

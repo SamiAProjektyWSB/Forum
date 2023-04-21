@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load hitcount_tags %}
 {% block content %}
     <div class="container">
         <div class="posts-table">
@@ -8,20 +9,23 @@
                 <div class="replies-and-views">odpowiedzi</div>
                 <div class="last-reply">ostatnia odpowiedz</div>
             </div>
+
+            {% for post in posts %}
             <div class="table-row">
                 <div class="status" >
                     tu tez jakis obrazek by sie przydal
                 </div>
                 <div class="subject">
-                    <a href="">Jak umyć naczynia bez zmywary?! pomocy!!!</a><br> Dodane przez: <a href="#">Jay-Z</a>   
+                    <a href="{{post.get_url}}">{{post.title}}</a><br> Dodane przez: <a href="#">Jay-Z</a>   
                 </div>
                 <div class="replies-and-views">
-                    2 odpowiedzi i 38 wyswietlen
+                    2 odpowiedzi i {% get_hit_count for post %} wyświetlen
                 </div>
                 <div class="last-reply">
-                    12.04.2023 przez <a href="#">Szczena</a>  
+                    12.04.2023 przez <a href="#">{{post.user.fullname | title}}</a>  
                 </div>
             </div>
+            {% endfor %}
         </div>
         <div class="site-num">Nawigacja Stron: 
             <br> <a href="#">1</a><a href="#">2</a><a href="#">3</a><a href="#"></a>

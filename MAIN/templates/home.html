@@ -9,127 +9,27 @@
             <div class="forum-title">
             <h1>Informacje</h1>
         </div>
+
+        {% for forum in forums  %}
+
         <div class="forum-row">
             <div class="forum-icon forum-columns center">
                 <i class="trzeba tu dodac jakas graficzke dawg"><img src="" alt="buont"></i>
             </div>
             <div class="forum-description forum-columns">
-                <h1><a href="">Tytuł opisu</a></h1>
-                <p>Opis: jakis opis jakiegos problemu jakiegos usera z jakiegos miasta z jakieogs krajui z jakiejs dzielni elo</p>
+                <h1><a href="{{forum.get_url}}">{{forum.title}}</a></h1>
+                <p>Opis: {{forum.discription}}</p>
             </div>
             <div class="forum-statistics forum-columns center">
-                <span>148 postów 75 tematów </span>
+                <span>{{forum.num_posts}} postów </span>
             </div>
             <div class="forum-information forum-columns">
-               <b><a href="">Ostatni post</a></b> został zamieszczony przez <a href=""> Heniek </a> 
+               <b><a href="{{forum.last_post.get_url}}">Ostatni post</a></b> został zamieszczony przez <a href="">{{forum.last_post.user.fullname | title}} </a> 
             <br>
-            W dniu: 21.04.2021
+            W dniu: {{forum.last_post.date | date}}
             </div>
         </div>
-        <!-- DOdane -->
-        <div class="forum-row">
-            <div class="forum-icon forum-columns center">
-                <i class="trzeba tu dodac jakas graficzke dawg"><img src="ikonka.jpg" alt="buont"></i>
-            </div>
-            <div class="forum-description forum-columns">
-                <h1><a href="">Tytuł opisu</a></h1>
-                <p>Opis: jakis opis jakiegos problemu jakiegos usera z jakiegos miasta z jakieogs krajui z jakiejs dzielni elo</p>
-            </div>
-            <div class="forum-statistics forum-columns center">
-                <span>148 postów 75 tematów </span>
-            </div>
-            <div class="forum-information forum-columns">
-               <b><a href="">Ostatni post</a></b> został zamieszczony przez <a href=""> Heniek </a> 
-            <br>
-            W dniu: 21.04.2021
-            </div>
-        </div>
-        <div class="forum-row">
-            <div class="forum-icon forum-columns center">
-                <i class="trzeba tu dodac jakas graficzke dawg"><img src="ikonka.jpg" alt="buont"></i>
-            </div>
-            <div class="forum-description forum-columns">
-                <h1><a href="">Tytuł opisu</a></h1>
-                <p>Opis: jakis opis jakiegos problemu jakiegos usera z jakiegos miasta z jakieogs krajui z jakiejs dzielni elo</p>
-            </div>
-            <div class="forum-statistics forum-columns center">
-                <span>148 postów 75 tematów </span>
-            </div>
-            <div class="forum-information forum-columns">
-               <b><a href="">Ostatni post</a></b> został zamieszczony przez <a href=""> Heniek </a> 
-            <br>
-            W dniu: 21.04.2021
-            </div>
-        </div>
-        <div class="forum-row">
-            <div class="forum-icon forum-columns center">
-                <i class="trzeba tu dodac jakas graficzke dawg"><img src="ikonka.jpg" alt="buont"></i>
-            </div>
-            <div class="forum-description forum-columns">
-                <h1><a href="">Tytuł opisu</a></h1>
-                <p>Opis: jakis opis jakiegos problemu jakiegos usera z jakiegos miasta z jakieogs krajui z jakiejs dzielni elo</p>
-            </div>
-            <div class="forum-statistics forum-columns center">
-                <span>148 postów 75 tematów </span>
-            </div>
-            <div class="forum-information forum-columns">
-               <b><a href="">Ostatni post</a></b> został zamieszczony przez <a href=""> Heniek </a> 
-            <br>
-            W dniu: 21.04.2021
-            </div>
-        </div>
-        <div class="forum-row">
-            <div class="forum-icon forum-columns center">
-                <i class="trzeba tu dodac jakas graficzke dawg"><img src="ikonka.jpg" alt="buont"></i>
-            </div>
-            <div class="forum-description forum-columns">
-                <h1><a href="">Tytuł opisu</a></h1>
-                <p>Opis: jakis opis jakiegos problemu jakiegos usera z jakiegos miasta z jakieogs krajui z jakiejs dzielni elo</p>
-            </div>
-            <div class="forum-statistics forum-columns center">
-                <span>148 postów 75 tematów </span>
-            </div>
-            <div class="forum-information forum-columns">
-               <b><a href="">Ostatni post</a></b> został zamieszczony przez <a href=""> Heniek </a> 
-            <br>
-            W dniu: 21.04.2021
-            </div>
-        </div>
-        <div class="forum-row">
-            <div class="forum-icon forum-columns center">
-                <i class="trzeba tu dodac jakas graficzke dawg"><img src="ikonka.jpg" alt="buont"></i>
-            </div>
-            <div class="forum-description forum-columns">
-                <h1><a href="">Tytuł opisu</a></h1>
-                <p>Opis: jakis opis jakiegos problemu jakiegos usera z jakiegos miasta z jakieogs krajui z jakiejs dzielni elo</p>
-            </div>
-            <div class="forum-statistics forum-columns center">
-                <span>148 postów 75 tematów </span>
-            </div>
-            <div class="forum-information forum-columns">
-               <b><a href="">Ostatni post</a></b> został zamieszczony przez <a href=""> Heniek </a> 
-            <br>
-            W dniu: 21.04.2021
-            </div>
-        </div>
-        <div class="forum-row">
-            <div class="forum-icon forum-columns center">
-                <i class="trzeba tu dodac jakas graficzke dawg"><img src="ikonka.jpg" alt="buont"></i>
-            </div>
-            <div class="forum-description forum-columns">
-                <h1><a href="">Tytuł opisu</a></h1>
-                <p>Opis: jakis opis jakiegos problemu jakiegos usera z jakiegos miasta z jakieogs krajui z jakiejs dzielni elo</p>
-            </div>
-            <div class="forum-statistics forum-columns center">
-                <span>148 postów 75 tematów </span>
-            </div>
-            <div class="forum-information forum-columns">
-               <b><a href="">Ostatni post</a></b> został zamieszczony przez <a href=""> Heniek </a> 
-            <br>
-            W dniu: 21.04.2021
-            </div>
-        </div>
-     <!-- DOdane dotąd -->         
+        {% endfor %}
     </div>
 
     <div class="someinfo">

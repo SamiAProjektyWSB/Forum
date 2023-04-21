@@ -1,8 +1,10 @@
-from django.urls import path
-from .views import home, posts, posts_detailed
+from django.urls import path, include
+from .views import home, posts, detail
 
 urlpatterns = [
     path("", home, name="home"),
-    path("posty/", posts, name="posts"),
-    path("szczegoly/", posts_detailed, name="posts_detailed"),
+    path("posty/<slug>/", posts, name="posts"),
+    path("szczegoly/<slug>/", detail, name="detail"),
+    path('tinymce/', include('tinymce.urls')),
+    path('hitcount/', include('hitcount.urls', namespace='hitcount')),
 ]

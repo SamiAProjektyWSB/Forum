@@ -1,10 +1,28 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
+from .models import Author , Category , Post
+from .utils import update_views
 
 def home(request):
-    return render(request, "home.html", {})
+    forums = Category.objects.all()
+    context = {
+        "forums":forums,
+    }
+    return render(request, "home.html", context)
 
-def posts(request):
-    return render(request, "posty.html", {})
+def posts(request, slug):
+    category = get_object_or_404(Category, slug=slug)
+    posts = Post.objects.filter(approved = True, categores = category)
 
-def posts_detailed(request):
-    return render(request, "post-szczegoly.html", {})
+    context = {
+       "posts":posts, 
+    }
+
+    return render(request, "posty.html", context)
+
+def detail(request, slug):
+    post = get_object_or_404(Post, slug=slug)
+    context = {
+        "post":post
+    }
+    update_views(request, post)
+    return render(request, "post-szczegoly.html", context)

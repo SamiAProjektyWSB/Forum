@@ -40,7 +40,10 @@ INSTALLED_APPS = [
 	 "APPNAME",
 	 "rest_framework",
 	 "corsheaders",
-	 "django_unicorn"
+	 "django_unicorn",
+     "tinymce",
+     'hitcount',
+     "taggit",
 ]
 
 MIDDLEWARE = [
