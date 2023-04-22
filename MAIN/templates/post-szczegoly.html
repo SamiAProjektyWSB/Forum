@@ -26,6 +26,8 @@
 
     <!--Komentaszzzzz-->
 
+{% for comment in post.comments.all %}
+
     <div class="com-container">
         <div class="head">
             <div class="author">Autor</div>
@@ -34,12 +36,12 @@
 
         <div class="body">
             <div class="author">
-                <div class="comUsername"><a href="#">Krokiet47</a></div>
+                <div class="comUsername"><a href="#">{{comment.user.fullname|title}}</a></div>
                 <div>Ranga</div>
-                <img src="zdjecieinnegousera.jpg" alt="tu powinno byc zdjecie profilowe uzytkownika">
+                <img src="{{comment.user.profile_pic.url}}" alt="tu powinno byc zdjecie profilowe uzytkownika">
                 <div></div>
             </div>
-            <div class="content">Cześć, myślę, że niezły z ciebie zdzichu. Pal gume. Fajnie, że wpadłeś. Ile masz lat? tego typu kot na grzałce. ku de mą. Wena jest king konga </div>
+            <div class="content">{{comment.content}}</div>
         <div class="comment"><button onclick="ShowMeReplyPlace()">Odpowiedz temu użytkownikowi</button></div>
         </div>
         <div class="comment-here hide" id="kom">
@@ -47,7 +49,7 @@
             <input type="submit" name="" id="" value="Dodaj">
         </div>
     </div>
-
+    
 <!--Komentarz komentarza :p-->
 
 <div class="reply-here hide" id="odp">
@@ -55,4 +57,24 @@
     <input type="submit" name="" id="" value="Dodaj">
 </div>
 
+{% for reply in comment.replies.all  %}
+
+<div class="com-container" style="width: 95%; margin-left:5%">
+    <div class="head">
+        <div class="author">Autor</div>
+        <div class="content">Odpowiedź</div>
+    </div>
+
+    <div class="body">
+        <div class="author">
+            <div class="comUsername"><a href="#">{{reply.user.fullname|title}}</a></div>
+            <div>Ranga</div>
+            <img src="{{reply.user.profile_pic.url}}" alt="tu powinno byc zdjecie profilowe uzytkownika">
+            <div></div>
+        </div>
+        <div class="content">{{reply.content}}</div>
+    </div>
+</div>
+{% endfor %}
+{% endfor %}
 {% endblock content %}

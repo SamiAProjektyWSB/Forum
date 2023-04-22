@@ -19,10 +19,10 @@
                     <a href="{{post.get_url}}">{{post.title}}</a><br> Dodane przez: <a href="#">Jay-Z</a>   
                 </div>
                 <div class="replies-and-views">
-                    2 odpowiedzi i {% get_hit_count for post %} wyświetlen
+                    {{post.num_comments}} odpowiedzi i {% get_hit_count for post %} wyświetlen
                 </div>
                 <div class="last-reply">
-                    12.04.2023 przez <a href="#">{{post.user.fullname | title}}</a>  
+                    {{post.last_reply.date|date}} przez <a href="#">{{post.last_reply.user.fullname|title}}</a>  
                 </div>
             </div>
             {% endfor %}
