@@ -102,7 +102,7 @@ class Post(models.Model):
     
     @property
     def num_comments(self):
-        return self.comment.count()
+        return self.comments.count()
     
     @property
     def last_reply(self):

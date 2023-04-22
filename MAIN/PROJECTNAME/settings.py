@@ -44,6 +44,8 @@ INSTALLED_APPS = [
      "tinymce",
      'hitcount',
      "taggit",
+     "register",
+     'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -139,3 +141,5 @@ CORS_ALLOWED_ORIGINS = [
 "http://127.0.0.1:9000",
 ]
 CORS_ALLOW_CREDENTIALS: True
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'

@@ -7,4 +7,5 @@ urlpatterns = [
     path("szczegoly/<slug>/", detail, name="detail"),
     path('tinymce/', include('tinymce.urls')),
     path('hitcount/', include('hitcount.urls', namespace='hitcount')),
+    path('account/', include('register.urls')),
 ]

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1 style="text-align:center; margin-block:50px; color:lightgreen;">Utwórz konto:</h1>
+
+<form method="POST" action="." style="text-align:center; margin-block:50px;">
+    {% csrf_token %}
+    {{form}}
+    <input type="submit" value="Zaloguj się" >
+</form>
+
+{% endblock content %}
