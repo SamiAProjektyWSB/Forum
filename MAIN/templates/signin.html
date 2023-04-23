@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1 style="text-align:center; margin-block:50px; color:lightgreen;">Utwórz konto:(nie gotowe)</h1>
+<h1 style="text-align:center; margin-block:50px; color:lightgreen;">Zaloguj się:</h1>
 
 <form method="POST" action="." style="text-align:center; margin-block:50px;">
     {% csrf_token %}
-    {{form}}    
+    {{form}}  
     <input type="submit" value="Zaloguj się" >
 </form>
 
