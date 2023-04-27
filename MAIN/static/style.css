@@ -1,264 +1,424 @@
-/* ustawienia globalne */
-
-*{
-    box-sizing: border-box;
-}
-
-html{
-    font-size:14px;
-    background-color: blue;
-    color: white;
-}
-
-a{
-    color: red;
-    text-decoration: none;
-    font-weight: bolder;
-}
-
-h1{
-
-}
-
-/* Strona home.html */
-
-.container{
-    margin: 20px;
-    padding: 20px;
-}
-
-.forum{
-    margin-top: 20px;
-}
-
-.forum-title{
-    background-color: brown;
-    padding-left: 5px;
-    border-radius: 5px;
-    margin: 4px;
-}
-
-.forum-row{
-    display: grid;
-    grid-template-columns: 7% 60% 13% 20%;
-}
-
-.forum-columns{
-    padding: 10px;
-    margin: 4px;
-    border-radius: 5px;
-    background-color: darkgreen;
-}
-
-.forum-description{
- 
-}
-
-.center{
+body {
+    margin: 0;
+    font-size: 1rem;
+    background-color: rgb(122, 122, 122);
+    font-family: "Sigmar", cursive;
+  }
+  
+  header {
+    margin: 0;
+  }
+  
+  .navbar {
     display: flex;
+    align-items: center;
     justify-content: center;
-    align-items: center;
-}
-
-/* menu wyboru ziomuś */
-
-header{
-    margin-inline: 12px;   
-}
-
-.navbar{
+    width: 100%;
+    height: 7rem;
+    font-size: 2rem;
+    background-color: rgb(113, 25, 31);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  #akon {
+    height: 100%;
+    width: 10%;
     display: flex;
     align-items: center;
-}
-
-.navigation{
-    background-color:cadetblue;
+    justify-content: center;
+    margin-left: 2rem;
+  }
+  
+  .ikonka {
+    margin-top: 50px;
+    height: 4rem;
+    width: 4rem;
+  }
+  
+  .brand-logo {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+  }
+  
+  .logo {
+    font-size: 3rem;
+  }
+  
+  .hide {
+    display: none;
+  }
+  
+  .navigation {
     padding: 12px;
-    width: 65%;
-    border-radius: 2px;
-    max-height: 10px;
-    margin-right: 10px;
-}
-
-.navbar-list{
+    width: 15rem;
+    height: 15rem;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .navbar-list {
     list-style-type: none;
     overflow: hidden;
-}
-
-.navbar-items a{
-    float: right;
-    display: block;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .navbar-items a {
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
     text-align: center;
-    margin-inline: 20px;
-    font-size: 20 px;
+    display: block;
+    font-size: 2rem;
     padding: 10px;
-    color: rgb(255, 255, 255);
-}
-
-.navbar-items a:hover{
-    background-color: black;
-}
-
-.icon-of-closing i{
-    font-size: 60px;
-    float: left;
-    cursor: pointer;
-}
-
-.hide{
-    display: none;
-}
-
-.navbar-bar-icon {
-    font-size: 60px;
-    display: inline-block;
-    margin-right: 10px;
-    color: white;
-    cursor: pointer;
-}
-
-.brand-logo{
-    font-size: 60px;
-    display: inline-block;
-}
-
-/* Wyszukiwarka gościu */
-.searching{
-    border:solid 1px pink ;
-    margin-top: 20px;
+    margin-right: 2rem;
+  }
+  
+  .navbar-items a:hover {
+    background-color: rgba(0, 0, 0, 0.213);
+    border-radius: 0.3rem;
+  }
+  
+  .searching {
     padding: 40px;
     display: flex;
     justify-content: center;
-    
-}
-
-.searching select{
+    align-items: center;
+    flex-direction: row;
+  }
+  
+  .searching select {
     padding: 10px;
-}
-
-/* Staty */
-.someinfo{
-    padding: 20px;
-    background-color: black;
-}
-
-/*strona własciwa forum z postami*/
-.table-head{
+    width: 9rem;
+    height: 2.7rem;
+    border-radius: 0.3rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  
+  #wyszukaj {
+    width: 20rem;
+    height: 2.5rem;
+    border-radius: 0.3rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    border: 1px solid black;
+    padding: 0rem 1rem;
+  }
+  
+  #guzik {
+    height: 2.7rem;
+    width: 6rem;
+    font-size: 1.3rem;
+    background-color: rgb(113, 25, 31);
+    border-radius: 0.3rem;
+    border: 1px solid black;
+    color: aliceblue;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  
+  .dol {
+    width: 100%;
+    height: 5rem;
     display: flex;
-}
-
-.table-head div{
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+    background-color: rgba(0, 0, 0, 0.738);
+    position: relative;
+    bottom: 0;
+    margin-top: 2rem;
+  }
+  
+  .forum-title {
+    background-color: rgb(66, 66, 66);
+    padding-left: 5px;
+    border-radius: 0.3rem;
+    border: 1px solid black;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    justify-content: center;
+  }
+  
+  .tytul {
+    font-size: 3rem;
+  }
+  
+  .container {
+    margin: 20px;
+    padding: 20px;
+  }
+  
+  .forum {
+    margin-top: 20px;
+  }
+  
+  .forum-row {
+    display: grid;
+    grid-template-columns: 10% 60% 10% 20%;
+  }
+  
+  .forum-columns {
+    padding: 10px;
+    margin: 4px;
+    border-radius: 5px;
+    background-color: rgb(190, 190, 190);
+  }
+  
+  .tytul-naglowek {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-size: 3rem;
+  }
+  
+  .opis-lol {
+    font-size: 1.5rem;
+  }
+  
+  .smile {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .forum-icon,
+  .forum-description,
+  .forum-statistics,
+  .forum-information {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .infoposty {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+  }
+  
+  .ostatnipost {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    font-size: 1.5rem;
+  }
+  
+  .przez {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: rgb(113, 25, 31);
+  }
+  
+  .table-head {
+    display: flex;
+  }
+  
+  .table-head div {
     padding: 5px;
     margin: 2px;
-    background-color: blueviolet;
-}
-
-.table-head .status{
-    flex: 5%;
-}
-.table-head .subject{
-    flex: 70%;
-}
-.table-head .replies-and-views{
-    flex: 10%;
-}
-.table-head .last-reply{
-    flex: 15%;
-}
-
-.table-row{
+    background-color: rgb(91, 91, 91);
+    height: 4rem;
     display: flex;
-}
-
-.table-row .status, .table-row .subject, .table-row .replies-and-views, .table-row .last-reply{
-    padding: 5px;
-    margin: 2px;
-    background-color: coral;
-}
-
-.table-row .status{
-    flex: 5%;
-}
-.table-row .subject{
-    flex: 70%;
-}
-.table-row .replies-and-views{
-    flex: 10%;
-}
-.table-row .last-reply{
-    flex: 15%;
-}
-
-.site-num{
-    padding: 20px;
-    font-size: 15px;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
     text-align: center;
-}
-
-.site-num a{
-    color: aqua;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    font-size: 1.5rem;
+    border-radius: 0.3rem;
+  }
+  
+  .table-head .status {
+    flex: 10%;
+  }
+  .table-head .subject {
+    flex: 65%;
+  }
+  .table-head .replies-and-views {
+    flex: 10%;
+  }
+  .table-head .last-reply {
+    flex: 15%;
+  }
+  
+  .table-row {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    align-items: center;
+    margin-top: 1rem;
+  }
+  
+  .table-row .status,
+  .table-row .subject,
+  .table-row .replies-and-views,
+  .table-row .last-reply {
+    padding: 5px;
+    margin: 2px;
+    border-radius: 0.3rem;
+    height: 7rem;
+    background-color: rgb(194, 194, 194);
+    display: flex;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-transform: uppercase;
+  }
+  
+  .table-row .status {
+    flex: 10%;
+  }
+  .table-row .subject {
+    flex: 65%;
+  }
+  .table-row .replies-and-views {
+    flex: 10%;
+  }
+  .table-row .last-reply {
+    flex: 15%;
+  }
+  
+  .site-num {
+    padding: 20px;
+    font-size: 1.2rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .site-num a {
+    font-size: 1.2rem;
+    color: rgb(113, 25, 31);
     margin-inline: 5px;
     padding: 5px 10px;
-    
-}
-
-/*Strona - szczegoly posta */
-
-.head{
+  }
+  
+  .temacik {
+    text-decoration: none;
+    color: black;
+    font-size: 1.3rem;
+  }
+  
+  .kto {
+    text-decoration: none;
+    color: rgb(113, 25, 31);
+  }
+  
+  .liczba {
+    text-decoration: none;
+  }
+  
+  /*Strona - szczegoly posta */
+  
+  .head {
     display: flex;
-    background-color: crimson;
+    background-color: rgb(80, 80, 80);
     padding: 5px;
-}
-
-.author{
+  }
+  
+  .author {
     flex: 20%;
-}
-
-.content{
-    flex:80%
-}
-
-.body{
+    text-transform: uppercase;
+  }
+  
+  .content {
+    text-transform: uppercase;
+  
+    flex: 80%;
+  }
+  
+  .body {
     display: flex;
-    background-color:goldenrod;
+    background-color: rgb(187, 187, 187);
     padding: 10px;
     margin-top: 5px;
-}
-
-.body .author .username{
+    height: 6.2rem;
+  }
+  
+  .body .author .username {
     font-size: 20px;
-}
-
-.body .author img{
+  }
+  
+  .body .author img {
     max-width: 49px;
     max-height: 78px;
-}
-
-.body .content .comment button{
+  }
+  
+  .body .content .comment button {
     border: none;
     padding: 10px;
     cursor: pointer;
     float: right;
-}
-
-.comment-here{
+  }
+  
+  .comment-here {
     margin-top: 50px;
-}
-
-.comment-here textarea{
+  }
+  
+  .comment-here textarea {
     width: 100%;
     min-height: 100px;
     padding: 10px;
     margin-block: 10px;
-}
-
-.comment-here input{
+  }
+  
+  .comment-here input {
     float: right;
     padding: 10px;
     border-radius: 10px;
     cursor: pointer;
-}
-
-.com-container{
+  }
+  
+  .com-container {
     margin-top: 20px;
-}
+  }
+  
+  .komenterium {
+    background-color: rgb(113, 25, 31);
+    border: none;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: aliceblue;
+  }
+  
+  .odpowiada {
+    text-decoration: none;
+    color: black;
+  }
+  
+  #textareas {
+    resize: none;
+    width: 15rem;
+    height: 5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    margin-left: 2rem;
+    margin-top: 1rem;
+  }
+  
+  #odpos {
+    font-size: 1.5rem;
+  }
+  

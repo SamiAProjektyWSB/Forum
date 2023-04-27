@@ -1,80 +1,113 @@
-{% extends 'base.html' %}
-{% load hitcount_tags %}
-{% block content %}
- 
-    <div class="top-container">
-        <div class="head">
-            <div class="author">Autor</div>
-            <div class="content">Temat: {{post.title}} ({%get_hit_count for post %} wyświetleń)</div>
-        </div>
+{% extends 'base.html' %} {% load hitcount_tags %} {% block content %}
 
-        <div class="body">
-            <div class="author">
-                <div class="username"><a href="#">{{post.user.fullname|title}}</a></div>
-                <div>Ranga</div>
-                <img src="{{post.user.profile_pic.url}}" alt="tu powinno byc zdjecie profilowe uzytkownika">
-                <div></div>
-            </div>
-            <div class="content">{{post.content|safe}}</div>
-        <div class="comment"><button onclick="ShowMeCommentPlace()">Dodaj komentarz</button></div>
-        </div>
-        <div class="comment-here hide" id="kom">
-            <textarea name="Komentarz" id="" placeholder="Napisz swój komentarz tutaj..."></textarea>
-            <input type="submit" name="" id="" value="Dodaj">
-        </div>
+<div class="top-container">
+  <div class="head">
+    <div class="author">Autor</div>
+    <div class="content">
+      Temat: {{post.title}} ({%get_hit_count for post %} wyświetleń)
     </div>
+  </div>
 
-    <!--Komentaszzzzz-->
+  <div class="body">
+    <div class="author">
+      <div class="username">
+        <a class="odpowiada" href="#">{{post.user.fullname|title}}</a>
+      </div>
+      <div>Ranga</div>
+      <img
+        src="{{post.user.profile_pic.url}}"
+        alt="tu powinno byc zdjecie profilowe uzytkownika"
+      />
+      <div></div>
+    </div>
+    <div class="content">{{post.content|safe}}</div>
+    <div class="comment">
+      <button class="komenterium" onclick="ShowMeCommentPlace()">
+        Dodaj komentarz
+      </button>
+    </div>
+  </div>
+  <div class="comment-here hide" id="kom">
+    <textarea
+      name="Komentarz"
+      id=""
+      placeholder="Napisz swój komentarz tutaj..."
+    ></textarea>
+    <input type="submit" name="" id="" value="Dodaj" />
+  </div>
+</div>
+
+<!--Komentaszzzzz-->
 
 {% for comment in post.comments.all %}
 
-    <div class="com-container">
-        <div class="head">
-            <div class="author">Autor</div>
-            <div class="content">Komentarz</div>
-        </div>
+<div class="com-container">
+  <div class="head">
+    <div class="author">Autor</div>
+    <div class="content">Komentarz</div>
+  </div>
 
-        <div class="body">
-            <div class="author">
-                <div class="comUsername"><a href="#">{{comment.user.fullname|title}}</a></div>
-                <div>Ranga</div>
-                <img src="{{comment.user.profile_pic.url}}" alt="tu powinno byc zdjecie profilowe uzytkownika">
-                <div></div>
-            </div>
-            <div class="content">{{comment.content}}</div>
-        <div class="comment"><button onclick="ShowMeReplyPlace()">Odpowiedz temu użytkownikowi</button></div>
-        </div>
-        <div class="comment-here hide" id="kom">
-            <textarea name="Komentarz" id="" placeholder="Napisz swój komentarz tutaj..."></textarea>
-            <input type="submit" name="" id="" value="Dodaj">
-        </div>
+  <div class="body">
+    <div class="author">
+      <div class="comUsername">
+        <a class="odpowiada" href="#">{{comment.user.fullname|title}}</a>
+      </div>
+      <div>Ranga</div>
+      <img
+        src="{{comment.user.profile_pic.url}}"
+        alt="tu powinno byc zdjecie profilowe uzytkownika"
+      />
+      <div></div>
     </div>
-    
+    <div class="content">{{comment.content}}</div>
+    <div class="comment">
+      <button class="komenterium" onclick="ShowMeReplyPlace()">
+        Odpowiedz temu użytkownikowi
+      </button>
+    </div>
+  </div>
+  <div class="comment-here hide" id="kom">
+    <textarea
+      name="Komentarz"
+      id=""
+      placeholder="Napisz swój komentarz tutaj..."
+    ></textarea>
+    <input type="submit" name="" id="" value="Dodaj" />
+  </div>
+</div>
+
 <!--Komentarz komentarza :p-->
 
 <div class="reply-here hide" id="odp">
-    <textarea name="Odpowiedz" id="" placeholder="Odpowiedz..."></textarea>
-    <input type="submit" name="" id="" value="Dodaj">
+  <textarea
+    name="Odpowiedz"
+    id="textareas"
+    placeholder="Odpowiedz..."
+  ></textarea>
+  <input type="submit" name="" id="odpos" value="Dodaj" />
 </div>
 
-{% for reply in comment.replies.all  %}
+{% for reply in comment.replies.all %}
 
-<div class="com-container" style="width: 95%; margin-left:5%">
-    <div class="head">
-        <div class="author">Autor</div>
-        <div class="content">Odpowiedź</div>
-    </div>
+<div class="com-container" style="width: 95%; margin-left: 5%">
+  <div class="head">
+    <div class="author">Autor</div>
+    <div class="content">Odpowiedź</div>
+  </div>
 
-    <div class="body">
-        <div class="author">
-            <div class="comUsername"><a href="#">{{reply.user.fullname|title}}</a></div>
-            <div>Ranga</div>
-            <img src="{{reply.user.profile_pic.url}}" alt="tu powinno byc zdjecie profilowe uzytkownika">
-            <div></div>
-        </div>
-        <div class="content">{{reply.content}}</div>
+  <div class="body">
+    <div class="author">
+      <div class="comUsername">
+        <a class="odpowiada" href="#">{{reply.user.fullname|title}}</a>
+      </div>
+      <div>Ranga</div>
+      <img
+        src="{{reply.user.profile_pic.url}}"
+        alt="tu powinno byc zdjecie profilowe uzytkownika"
+      />
+      <div></div>
     </div>
+    <div class="content">{{reply.content}}</div>
+  </div>
 </div>
-{% endfor %}
-{% endfor %}
-{% endblock content %}
+{% endfor %} {% endfor %} {% endblock content %}

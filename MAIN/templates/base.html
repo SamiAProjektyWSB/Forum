@@ -2,49 +2,59 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HomePage</title>
-    <link rel="stylesheet" href=" {% static 'style.css' %} ">
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&family=Sigmar&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href=" {% static 'style.css' %} " />
+  </head>
+  <body>
     <header>
-        <div class="navbar">
-            <nav class="navigation hide" id="navbar">
-                <ul class="navbar-list">
-                    <span class="icon-of-closing" onclick="ShowDaNavbar()"><i class="close">X</i></span>
-                    <li class="navbar-items">
-                        <a href="#" >Strona Główna</a>
-                    </li>
-                    <li class="navbar-items">
-                        <a href="#" >Forum</a>
-                    </li>
-                    <li class="navbar-items">
-                        <a href="#" >O nas</a>
-                    </li>
-                </ul>    
-            </nav>
-            <a href="#" class="navbar-bar-icon" id="akon" onclick="HideDaNavbar()"><img src="" alt="ikonka rozwijania navbara"></i></a>    
-            <div class="brand-logo">Forum O wszystkim i o niczym</div>
+      <div class="navbar">
+        <nav class="navigation" id="navbar" style="padding: 0px">
+          <ul
+            class="navbar-list"
+            style="margin-bottom: 0px; margin-top: 0px; padding-left: 0px"
+          >
+            <li class="navbar-items">
+              <a href="">Strona Główna</a>
+            </li>
+            <li class="navbar-items">
+              <a href="#">Forum</a>
+            </li>
+            <li class="navbar-items">
+              <a href="#">O nas</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="brand-logo">
+          <a class="logo"> Forum O wszystkim i o niczym </a>
         </div>
-        <div class="searching">
-            <select name="" id="">
-                <option value="anything">Wyszukiwanie...</option>
-            </select>
-            <input type="text" name="q" id="" placeholder="Wyszukaj...">
-            <button>Znajdź!</button>
-        </div>
+      </div>
+      <div class="searching">
+        <select name="" id="">
+          <option value="anything">Wyszukiwanie...</option>
+        </select>
+        <input type="text" name="q" id="wyszukaj" placeholder="Wyszukaj..." />
+        <button id="guzik">Znajdź!</button>
+      </div>
     </header>
 
-    {% block content %}
-    {% endblock content %}
+    {% block content %} {% endblock content %}
 
-    <footer>
-        <span>Forum utworzone przez: Sami Al-Sad & Maciek Górny & Patryk Magnus</span>
+    <footer class="dol">
+      <span class="info"
+        >Forum utworzone przez: Sami Al-Sad & Maciek Górny & Patryk Magnus</span
+      >
     </footer>
 
     <script src="{% static 'js.js' %}"></script>
-</body>
+  </body>
 </html>
